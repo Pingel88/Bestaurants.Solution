@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using Bestaurants.Models;
 
 
 namespace Bestaurants
@@ -13,8 +14,8 @@ namespace Bestaurants
     public Startup(IWebHostEnvironment env)
     {
       var builder = new ConfigurationBuilder()
-          .SetBasePath(env.ContentRootPath)
-          .AddJsonFile("appsettings.json");
+        .SetBasePath(env.ContentRootPath)
+        .AddJsonFile("appsettings.json");
       Configuration = builder.Build();
     }
 
